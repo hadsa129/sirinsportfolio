@@ -494,6 +494,7 @@ footer {
   <ul class="nav-links">
     <li><a onclick="showPage('home')">Home</a></li>
     <li><a onclick="showPage('about')">About</a></li>
+    <li><a onclick="showPage('education')">Education</a></li>
     <li><a onclick="showPage('experience')">Experience</a></li>
     <li><a onclick="showPage('projects')">Projects</a></li>
     <li><a onclick="showPage('certifications')">Certifications</a></li>
@@ -614,6 +615,40 @@ footer {
   </div>
 </div>
 
+
+<!-- ══════ EDUCATION ══════ -->
+<div id="education" class="page">
+  <div class="page-wrap">
+    <div class="page-header">
+      <div class="eyebrow">Academic background</div>
+      <h2 class="page-title">Education</h2>
+    </div>
+    <div class="exp-list">
+      <div class="exp-item">
+        <div class="exp-left">
+          <div class="exp-period">2022 – 2025</div>
+          <div class="exp-co">ENIS</div>
+          <div class="exp-type">Engineering Degree</div>
+        </div>
+        <div>
+          <div class="exp-role">Electrical Engineering Degree</div>
+          <p class="exp-desc">National Engineering School of Sfax — Engineering degree in Electrical Engineering with specialization in hardware design, multi-layer PCB design, signal &amp; power integrity, and embedded systems.</p>
+        </div>
+      </div>
+      <div class="exp-item">
+        <div class="exp-left">
+          <div class="exp-period">2020 – 2022</div>
+          <div class="exp-co">IPEIN</div>
+          <div class="exp-type">Preparatory Cycle</div>
+        </div>
+        <div>
+          <div class="exp-role">Preparatory Cycle</div>
+          <p class="exp-desc">Preparatory Institute for Engineering Studies of Nabeul — Two-year preparatory program in mathematics and physics for engineering studies, providing strong foundation in scientific and technical disciplines.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 <!-- ══════ EDUCATION ══════ -->
 <div id="education" class="page">
   <div class="page-wrap">
@@ -920,21 +955,21 @@ footer {
         <div class="contact-ico">📍</div>
         <div>
           <div class="contact-lbl">Location</div>
-          <div class="contact-val">Sfax, Tunisia</div>
+          <div class="contact-val">Tunis, Tunisia</div>
         </div>
       </div>
       <div class="contact-item">
         <div class="contact-ico">💼</div>
         <div>
           <div class="contact-lbl">LinkedIn</div>
-          <div class="contact-val">linkedin.com/in/sirine-sahraoui</div>
+          <div class="contact-val">linkedin.com/in/sirine-sahraoui-677000296/</div>
         </div>
       </div>
       <div class="contact-item">
-        <div class="contact-ico">🎓</div>
+        <div class="contact-ico"></div>
         <div>
-          <div class="contact-lbl">Institution</div>
-          <div class="contact-val">ENIS — École Nationale d'Ingénieurs de Sfax</div>
+          <div class="contact-lbl">Phone Number</div>
+          <div class="contact-val">53 375 426</div>
         </div>
       </div>
     </div>
