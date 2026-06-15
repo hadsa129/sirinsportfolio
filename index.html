@@ -350,7 +350,7 @@ nav {
   background:var(--white); cursor:pointer; transition:all 0.2s;
 }
 .cert-card:hover { border-color: var(--blush-300); transform:translateY(-3px); }
-.cert-img { width:100%; height:200px; object-fit:cover; }
+.cert-img { width:100%; height:200px; object-fit:contain; background:var(--white); }
 .cert-placeholder {
   width:100%; height:200px; background:var(--blush-50);
   display:flex; align-items:center; justify-content:center; flex-direction:column;
@@ -371,7 +371,7 @@ nav {
   border:1px solid var(--border); border-radius:4px; overflow:hidden;
   background:var(--white);
 }
-.ieee-card img { width:100%; height:220px; object-fit:cover; }
+.ieee-card img { width:100%; height:220px; object-fit:contain; background:var(--white); }
 .ieee-info { padding:1.5rem; }
 .ieee-name { font-weight:500; margin-bottom:0.3rem; }
 .ieee-date { font-family:'JetBrains Mono',monospace; font-size:0.7rem; color:var(--text-light); }
@@ -396,7 +396,8 @@ nav {
 .project-gallery img {
   width:100%;
   height:200px;
-  object-fit:cover;
+  object-fit:contain;
+  background:var(--white);
   border-radius:4px;
   border:1px solid var(--border);
   cursor:pointer;
@@ -427,7 +428,7 @@ nav {
 }
 .resume-card p { color:var(--text-mid); font-weight:300; line-height:1.8; margin-bottom:2rem; }
 .resume-meta {
-  display:grid; grid-template-columns:repeat(3,1fr);
+  display:grid; grid-template-columns:repeat(2,1fr);
   gap:1.5rem; margin-top:2.5rem; padding-top:2rem;
   border-top:1px solid var(--border); text-align:left;
 }
@@ -459,6 +460,19 @@ nav {
 .modal-overlay.open { display:flex; }
 .modal-inner { position:relative; }
 .modal-inner img { max-width:90vw; max-height:88vh; border-radius:4px; display:block; }
+.resume-preview-inner {
+  width:min(920px, 92vw);
+  height:min(82vh, 760px);
+  background:var(--white);
+  border-radius:4px;
+  overflow:hidden;
+}
+.resume-preview-inner iframe {
+  width:100%;
+  height:100%;
+  border:0;
+  display:block;
+}
 .modal-close {
   position:absolute; top:-2.5rem; right:0;
   color:rgba(255,255,255,0.7); font-size:1.5rem;
@@ -509,7 +523,7 @@ footer {
     <div>
       <div class="home-eyebrow">Hardware Design Engineer</div>
       <h1 class="home-name">Sirine<br><em>Sahraoui</em></h1>
-      <p class="home-tagline">Electrical engineer specialized in multi-layer PCB design, signal &amp; power integrity, and hardware validation — from schematic to silicon.</p>
+      <p class="home-tagline">Electrical engineer focused on multi-layer PCB design, signal &amp; power integrity, and hardware validation — from concept to industrialization.</p>
       <div class="home-ctas">
         <button class="btn btn-filled" onclick="showPage('projects')">View Projects</button>
         <button class="btn btn-ghost" onclick="showPage('resume')">Download CV</button>
@@ -559,14 +573,14 @@ footer {
     <div class="about-grid">
       <div>
         <div class="about-text">
-          <p>I'm an Electrical Engineer from the National Engineering School of Sfax (ENIS), specialized in hardware design with a focus on multi-layer PCB design, signal &amp; power integrity analysis, and hardware validation.</p>
-          <p>My work spans complex 8-layer System-on-Module boards to IoT gateways integrating multiple wireless technologies. I bring a simulation-first approach to hardware: validating power rails and signal paths through HyperLynx and LTspice before a single board is fabricated.</p>
-          <p>I'm passionate about the intersection of embedded systems and analog/RF design — where software meets physics. I've shared my knowledge as an invited speaker at IEEE SSCS workshops within the ENIS engineering community.</p>
+          <p>Graduate from the National Engineering School of Sfax (ENIS), focused on electrical engineering, PCB design, and embedded hardware validation.</p>
+          <p>My work spans multi-layer System-on-Module boards, IoT gateways, motor-control boards, and sensor-based embedded systems.</p>
+          <p>I enjoy turning schematic ideas into manufacturable boards, with careful attention to simulation, layout constraints, and practical validation.</p>
         </div>
         <div class="about-stats">
           <div><div class="stat-num">6+</div><div class="stat-label">PCB Projects</div></div>
           <div><div class="stat-num">8</div><div class="stat-label">Max Layers</div></div>
-          <div><div class="stat-num">3+</div><div class="stat-label">Years Experience</div></div>
+          <div><div class="stat-num">2</div><div class="stat-label">Professional Experiences</div></div>
         </div>
       </div>
       <div class="tools-section">
@@ -603,13 +617,6 @@ footer {
             <span class="chip">MATLAB</span><span class="chip">LabVIEW</span>
           </div>
         </div>
-        <div class="tool-group">
-          <div class="tool-group-label">Quality &amp; Standards</div>
-          <div class="chips">
-            <span class="chip">IPC Standards</span><span class="chip">DFM</span>
-            <span class="chip">ISO 9001</span><span class="chip">QHSE</span>
-          </div>
-        </div>
       </div>
     </div>
   </div>
@@ -632,7 +639,7 @@ footer {
         </div>
         <div>
           <div class="exp-role">Electrical Engineering Degree</div>
-          <p class="exp-desc">National Engineering School of Sfax — Engineering degree in Electrical Engineering with specialization in hardware design, multi-layer PCB design, signal &amp; power integrity, and embedded systems.</p>
+          <p class="exp-desc">National Engineering School of Sfax — Electrical Engineering degree.</p>
         </div>
       </div>
       <div class="exp-item">
@@ -643,46 +650,12 @@ footer {
         </div>
         <div>
           <div class="exp-role">Preparatory Cycle</div>
-          <p class="exp-desc">Preparatory Institute for Engineering Studies of Nabeul — Two-year preparatory program in mathematics and physics for engineering studies, providing strong foundation in scientific and technical disciplines.</p>
+          <p class="exp-desc">Preparatory Institute for Engineering Studies of Nabeul — Physics and Technology preparatory cycle.</p>
         </div>
       </div>
     </div>
   </div>
 </div>
-<!-- ══════ EDUCATION ══════ -->
-<div id="education" class="page">
-  <div class="page-wrap">
-    <div class="page-header">
-      <div class="eyebrow">Academic background</div>
-      <h2 class="page-title">Education</h2>
-    </div>
-    <div class="exp-list">
-      <div class="exp-item">
-        <div class="exp-left">
-          <div class="exp-period">2022 – 2025</div>
-          <div class="exp-co">ENIS</div>
-          <div class="exp-type">Engineering Degree</div>
-        </div>
-        <div>
-          <div class="exp-role">Electrical Engineering Degree</div>
-          <p class="exp-desc">National Engineering School of Sfax — Engineering degree in Electrical Engineering with specialization in hardware design, multi-layer PCB design, signal & power integrity, and embedded systems.</p>
-        </div>
-      </div>
-      <div class="exp-item">
-        <div class="exp-left">
-          <div class="exp-period">2020 – 2022</div>
-          <div class="exp-co">IPEIN</div>
-          <div class="exp-type">Preparatory Cycle</div>
-        </div>
-        <div>
-          <div class="exp-role">Preparatory Cycle</div>
-          <p class="exp-desc">Preparatory Institute for Engineering Studies of Nabeul — Two-year preparatory program in mathematics and physics for engineering studies, providing strong foundation in scientific and technical disciplines.</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
 <!-- ══════ EXPERIENCE ══════ -->
 <div id="experience" class="page">
   <div class="page-wrap">
@@ -711,7 +684,7 @@ footer {
         </div>
         <div>
           <span class="exp-arrow">↗</span>
-          <div class="exp-role">Junior Hardware Design Engineer</div>
+          <div class="exp-role">Hardware Design Engineer Intern</div>
           <p class="exp-desc">6-layer IoT Gateway PCB around STM32MP1 SOM, integrating LTE, LoRa, Wi-Fi/BT, GPS. Full SI/PI simulation via HyperLynx and LTspice. Complete fabrication deliverables.</p>
         </div>
       </div>
@@ -911,7 +884,8 @@ footer {
       <h2>Sirine Sahraoui</h2>
       <p>Electrical Engineer · Hardware Design · PCB · SI/PI · Altium Designer · ENIS Sfax</p>
       <div style="display:flex;justify-content:center;gap:1rem;flex-wrap:wrap;">
-        <a class="btn btn-filled" href="#" onclick="alert('Replace this href with your resume PDF path to enable download.')">⬇ Download Resume PDF</a>
+        <a class="btn btn-filled" href="Sirine_SAHRAOUI_CV.pdf" download>Download Resume PDF</a>
+        <button class="btn btn-ghost" onclick="openModal('modal-resume')">Preview Resume</button>
         <a class="btn btn-ghost" onclick="showPage('contact')">Get in touch</a>
       </div>
       <div class="resume-meta">
@@ -924,11 +898,6 @@ footer {
           <div class="resume-meta-label">Specialization</div>
           <div class="resume-meta-val">Hardware Design</div>
           <div class="resume-meta-sub">PCB · SI/PI · Embedded</div>
-        </div>
-        <div>
-          <div class="resume-meta-label">Location</div>
-          <div class="resume-meta-val">Sfax, Tunisia</div>
-          <div class="resume-meta-sub">Open to relocation</div>
         </div>
       </div>
     </div>
@@ -977,6 +946,13 @@ footer {
 </div>
 
 <!-- ══════ MODALS ══════ -->
+<div id="modal-resume" class="modal-overlay" onclick="closeModal('modal-resume')">
+  <div class="modal-inner resume-preview-inner" onclick="event.stopPropagation()">
+    <button class="modal-close" onclick="closeModal('modal-resume')">✕</button>
+    <iframe src="Sirine_SAHRAOUI_CV.pdf" title="Sirine Sahraoui Resume Preview"></iframe>
+  </div>
+</div>
+
 <div id="modal-altium" class="modal-overlay" onclick="closeModal('modal-altium')">
   <div class="modal-inner">
     <button class="modal-close" onclick="closeModal('modal-altium')">✕</button>
@@ -1053,7 +1029,7 @@ const projects = {
     sub: 'Multi-connectivity gateway with STM32MP1 — LTE, LoRa, Wi-Fi, BT, GPS',
     date: 'Feb – Aug 2025', company: 'OTTO ES', type: 'PFE Internship', layers: '6-layer PCB',
     tools: ['Altium Designer','STM32MP1','HyperLynx','LTspice','PSpice for TI','LTE','LoRa','Wi-Fi/BT','GPS','Impedance Control','DFM'],
-    images: ['image1', 'image2', 'image3'],
+    images: ['image1', 'image2', 'image3', 'image4'],
     body: `<h3>Overview</h3>
 <p>Production-ready 6-layer multi-connectivity IoT Gateway PCB built around an STM32MP1 System-on-Module. This final year project bridges academic learning and real industrial design practice.</p>
 <h3>Connectivity Modules Integrated</h3>
@@ -1110,7 +1086,7 @@ const projects = {
     sub: 'Real-time gas leak detection with 3-level alert architecture',
     date: '2024', company: 'ENIS', type: 'Academic Project', layers: '2-layer PCB',
     tools: ['Altium Designer','Gas sensor','STM32','TFT Display','C firmware','Embedded systems'],
-    images: ['image6'],
+    images: ['image6', 'image7'],
     body: `<h3>Overview</h3>
 <p>Complete embedded system for real-time gas leak detection with a multi-level alert architecture. Designed in Altium Designer, produced as a 2-layer PCB, and validated on a prototype board.</p>
 <h3>Alert System — 3 Levels</h3>
@@ -1136,7 +1112,7 @@ const projects = {
     sub: 'PWM closed-loop speed control with full PCB design',
     date: '2023', company: 'ENIS', type: 'Academic Project', layers: '2-layer PCB',
     tools: ['Altium Designer','PWM control','Closed-loop','Motor driver','C firmware'],
-    images: ['image7'],
+    images: [],
     body: `<h3>Overview</h3>
 <p>2-layer PWM-based DC motor speed regulator covering the complete hardware design flow: schematic capture, PCB layout, and functional validation.</p>
 <h3>Control Architecture</h3>
@@ -1215,13 +1191,6 @@ function showProjectDetail(id) {
         <div class="sidebar-box">
           <h4>Tools &amp; Technologies</h4>
           <div class="sidebar-chips">${d.tools.map(t=>`<span>${t}</span>`).join('')}</div>
-        </div>
-        <div class="sidebar-box">
-          <h4>Project Info</h4>
-          <div style="display:flex;flex-direction:column;gap:1rem;">
-            <div><div class="meta-label">PCB Layers</div><div class="meta-val" style="color:var(--rose-dark)">${d.layers}</div></div>
-            <div><div class="meta-label">Context</div><div class="meta-val">${d.type}</div></div>
-          </div>
         </div>
       </div>
     </div>`;
